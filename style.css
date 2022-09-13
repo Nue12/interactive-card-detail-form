@@ -1,0 +1,227 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap');
+
+.filledSuccess {
+    display: none;
+}
+
+
+* {
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+:root {
+    /* input error */
+    --Red-- : hsl(0, 100%, 66%);
+    /* Neutral */
+    --White-- : hsl(0, 0%, 100%);
+    --Light-grayish-violet-- : hsl(270, 3%, 87%);
+    --Dark-grayish-violet-- : hsl(279, 6%, 55%);
+    --Very-dark-violet-- : hsl(278, 68%, 11%);
+}
+
+#root {
+    display: flex;
+    align-items: center;
+}
+
+body {
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+}
+
+/* left section */
+
+.left-section {
+    color: var(--Light-grayish-violet--);
+    width: 30%;
+    height: 100vh;
+    background-image: url(./src/images/bg-main-desktop.png);
+    background-size: cover;
+    padding: 0px 0px 0px 120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.card-bg-front {
+    background-image: url(./src/images/bg-card-front.png);
+    background-size: 355px 180px;
+    background-repeat: no-repeat;
+    padding: 25px;
+    width: 355px;
+}
+
+.logo {
+    width: 60px;
+}
+
+.cardNo {
+    font-size: 22px;
+    margin: 35px 0px 15px;
+    letter-spacing: 3px;
+}
+
+.nameAndExpire {
+    display: flex;
+    justify-content:space-between;
+    font-size: 13px;
+    letter-spacing: 1px;
+}
+
+.card-bg-back {
+    margin: 20px 0px 0px 80px;
+    font-size: 13px;
+    background-image: url(./src/images/bg-card-back.png);
+    background-size: 355px 180px;
+    width: 355px;
+    height: 180px;
+    padding: 80px 0px 0px 280px;
+}
+
+
+/* RIGHT SECTION */
+
+.right-section {   
+    letter-spacing: 1px;
+    font-size: 13px;
+    margin-left: 300px;
+}
+
+label {
+    display: block;
+    margin: 20px 0px 7px;
+}
+
+label:first {
+    margin: 0px 0px 7px;
+}
+
+input {
+    padding: 8px 12px;
+    font-family: inherit;
+    border: 1px solid var(--Light-grayish-violet--);
+    border-radius: 7px;
+}
+
+.cardholder-container input, .cardNumber-container input {
+    width: 100%;
+}
+
+.expAndCvc {
+    display: flex;
+}
+
+.expDate-container input {
+    width: 65px;
+    margin: 0px 5px 0px 0px;
+}
+
+.CVC input {
+    margin: 0px 0px 0px 10px;
+}
+
+button {
+    width: 100%;
+    font-family: inherit;
+    font-size: inherit;
+    color: #FFF;
+    background-color: var(--Very-dark-violet--);
+    padding: 12px;
+    border-radius: 7px;
+    margin: 30px 0px;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+
+.thankPage {
+    display: none;
+    width: 300px;
+    text-align: center;
+    font-weight: 500;
+    color: var(--Dark-grayish-violet--);
+}
+
+.thankPage h2 {
+    color: #000;
+    font-size: 25px;
+    letter-spacing: 3px;
+    margin: 30px 0px 10px;
+    font-weight: 500;
+}
+
+.errInput {
+    border: 1px solid var(--Red--);
+}
+
+.error {
+    display: none;
+    font-size: 13px;
+    letter-spacing: 0px;
+    color: var(--Red--);
+    margin: 5px 0px;
+}
+
+.showErr {
+    display: block;
+}
+
+.cvcErr {
+    margin: 5px 10px;
+}
+
+.showThank {
+    display: block;
+}
+
+
+@media screen and (max-width: 990px) {
+    .left-section {
+        padding: 130px 0px 0px 50px;
+    }
+    .right-section {
+        margin-left: 250px;
+    }
+}
+
+@media screen and (max-width: 890px) {
+    #root {
+        flex-direction: column;      
+    }
+
+    .left-section {
+        background-image: url(./src/images/bg-main-mobile.png);
+        background-size: 100vw 300px;
+        background-repeat: no-repeat;
+        width: 100vw;
+        padding: 50px 0px 0px;
+        flex-direction: column-reverse;
+        justify-content: flex-end;
+        height: 400px;
+    }
+    .cardFront-container, .cardBack-container {
+        width: 400px;
+        margin: 0px auto;
+    }
+    .card-bg-front {
+        margin: -80px 0px 0px 0px;
+    }
+    .card-bg-back {
+        margin-left: 45px;
+    }
+
+    /* right section */
+    .right-section {
+        margin: 0px;
+    }
+}
+
+@media screen and (max-width: 410px) {
+    .cardFront-container, .cardBack-container {
+        width: 370px;
+    }
+    .card-bg-back {
+        margin-left: 10px;
+    }
+}
