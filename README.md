@@ -22,5 +22,5 @@ And if you fill uncorrectly, it will raise error message.
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [Frontend mentor solution](https://www.frontendmentor.io/challenges/interactive-card-details-form-XpS8cKZDWw/hub/interactive-card-detail-form-using-react-tsnmgIsx6v)
+- Live Site URL: [Live site](https://nue-interactive-card-detail-form.netlify.app/)
