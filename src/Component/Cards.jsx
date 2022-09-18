@@ -11,9 +11,9 @@ function cards(props) {
             <div className='nameAndExpire'>
                 <p>{props.name.length == 0 ? "JANE APPLESEED" : props.name}</p>
                 <p>
-                  <span>{props.expMonth.length == 0 ? "00" : props.expMonth}</span>
+                  <span>{props.expMonth.length == 0 ? "00" : props.expMonth.length == 1 ? `0${props.expMonth}` : props.expMonth}</span>
                   /
-                  <span>{props.expYear.length == 0 ? "00" : props.expYear}</span>
+                  <span>{props.expYear.length == 0 ? "00" : props.expYear.length == 1 ? `0${props.expYear}` : props.expYear}</span>
                 </p>
             </div>
         </div>

@@ -38,10 +38,6 @@ function PaymentPage() {
             focusChange(event);
           } else if (value.length > 0) {
             removeErr("");
-            // const input = event.target;
-            // input.className = ""
-            // const errTag = event.target.parentElement.lastChild;
-            // errTag.classList.remove("showErr");
           }
         }
 
@@ -55,10 +51,6 @@ function PaymentPage() {
             focusChange(event);
           } else if (value.length > 0) {
             removeErr("MM");
-            // const input = event.target;
-            // input.className = "MM";
-            // const errTag = event.target.parentElement.lastChild;
-            // errTag.classList.remove("showErr");
           }
         }
 
@@ -70,10 +62,6 @@ function PaymentPage() {
             focusChange(event);
           } else if (value.length > 0) {
             removeErr("YY");
-            // const input = event.target;
-            // input.className = "YY";
-            // const errTag = event.target.parentElement.lastChild;
-            // errTag.classList.remove("showErr");
           }
         }
 
@@ -83,10 +71,6 @@ function PaymentPage() {
             focusChange(event);
           } else if (value.length > 0){
             removeErr("");
-            // const input = event.target;
-            // input.className = "";
-            // const errTag = event.target.parentElement.lastChild;
-            // errTag.classList.remove("showErr");
           }
         }
 
@@ -122,43 +106,26 @@ function PaymentPage() {
         if(cardForm.cardNo.length !== 19) {
           const inputContainer = event.target.querySelector(".cardNumber-container");
           putError(inputContainer, "input");
-          // const input = inputContainer.querySelector("input");
-          // input.className = "errInput";
-          // const errTag = inputContainer.lastChild;
-          // errTag.classList.add("showErr");
         }
 
         if(cardForm.expMonth.length === 0) {
           const inputContainer = event.target.querySelector(".expAndCvc").firstChild;
           putError(inputContainer, ".MM");
-          // const input = inputContainer.querySelector(".MM");
-          // input.className = "errInput";
-          // const errTag = inputContainer.lastChild;
-          // errTag.classList.add("showErr");
         } else if (cardForm.expMonth < 1 || cardForm.expMonth > 12) {
           const inputContainer = event.target.querySelector(".expAndCvc").firstChild;
           const outRangeTag = inputContainer.querySelector(".outOfRange");
           outRangeTag.classList.add("showErr");
           console.log(outRangeTag)
         } 
-        console.log(cardForm.expMonth);
 
         if(cardForm.expYear.length !== 2) {
           const inputContainer = event.target.querySelector(".expAndCvc").firstChild;
           putError(inputContainer, ".YY");
-          // const input = inputContainer.querySelector(".YY");
-          // input.className = "errInput";
-          // const errTag = inputContainer.lastChild;
-          // errTag.classList.add("showErr");
         }
 
         if(cardForm.CVC.length !== 3) {
           const inputContainer = event.target.querySelector(".expAndCvc").lastChild;
           putError(inputContainer, "input");
-          // const input = inputContainer.querySelector("input");
-          // input.className = "errInput";
-          // const errTag = inputContainer.lastChild;
-          // errTag.classList.add("showErr");
         }
 
         if(cardForm.name.length > 0 && cardForm.cardNo.length === 19 && 
